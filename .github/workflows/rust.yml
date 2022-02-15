@@ -31,10 +31,15 @@ jobs:
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
-    - name: Upload
+    - name: Check
       run: |
         echo 进入构建目录
         cd target
         echo 查看
         tree
+    #上传全部内容
+    - uses: actions/upload-artifact@v2 
+      with:
+        name: libgodot_cubism.so
+        path: target/debug/build
   
