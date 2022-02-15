@@ -15,12 +15,18 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Clang
-      uses: egor-tensin/setup-clang@v1
+    - name: Setup MSYS2
+      uses: msys2/setup-msys2@v2
       with:
-        version: latest
-        platform: x64
-        cygwin: 1
+        msystem: MINGW64
+        update: true
+        install: mingw-w64-x86_64-clang
+    #- name: Set up Clang
+    #  uses: egor-tensin/setup-clang@v1
+    #  with:
+    #    version: latest
+    #    platform: x64
+        #cygwin: 1
     - name: Build #设置环境变量并构建
       run: |
         $env:CUBISM_CORE="third-party"
