@@ -22,7 +22,7 @@ jobs:
         #release: true #是否使用内置msys2
         #location: C:\ #设置安装路径
         update: true
-        install: mingw-w64-x86_64-clang mingw-w64-x86_64-compiler-rt mingw-w64-x86_64-clang-tools-extra
+        install: mingw-w64-x86_64-clang mingw-w64-x86_64-compiler-rt mingw-w64-x86_64-clang-tools-extra mingw-w64-clang-x86_64-cargo-c mingw-w64-x86_64-cargo-c
     - name: Check libclang.dll
       run: |
         cd C:/msys64/mingw64/bin/
