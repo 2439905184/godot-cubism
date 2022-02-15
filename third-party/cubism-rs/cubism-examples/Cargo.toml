@@ -1,0 +1,19 @@
+[package]
+name = "cubism-examples"
+version = "0.1.0"
+authors = ["Lukas Wirth <lukastw97@gmail.com>"]
+edition = "2018"
+publish = false
+
+[[bin]]
+name = "display"
+path = "src/display.rs"
+
+[dependencies]
+cubism = { path = "..", version = "0.1.0" }
+cubism-core-wgpu-renderer = { version = "0.1.0", path = "../cubism-core-wgpu-renderer"}
+env_logger = "0.7"
+log = "0.4"
+image = { version = "^0.22", default-features = false, features = ["png_codec"] }
+wgpu = "0.4"
+winit = "0.20"
