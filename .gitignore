@@ -1,4 +1,4 @@
 /target
 
-/third-party/Core
+#/third-party/Core
 /third-party/Samples
