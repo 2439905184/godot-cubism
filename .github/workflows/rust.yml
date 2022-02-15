@@ -19,7 +19,7 @@ jobs:
       uses: msys2/setup-msys2@v2
       with:
         msystem: MINGW64
-        location: C:\msys64\
+        location: C:\msys64\ #设置安装路径
         update: true
         install: mingw-w64-x86_64-clang mingw-w64-x86_64-compiler-rt mingw-w64-x86_64-clang-tools-extra
     #- name: Set up Clang
