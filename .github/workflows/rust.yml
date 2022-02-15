@@ -36,5 +36,5 @@ jobs:
         echo 进入构建目录
         cd target
         echo 查看
-        ls
+        tree
   
