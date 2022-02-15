@@ -20,6 +20,7 @@ jobs:
       with:
         version: latest
         platform: x64
+        cygwin: 1
     - name: Build #设置环境变量并构建
       run: |
         $env:CUBISM_CORE="third-party"
