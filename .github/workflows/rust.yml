@@ -33,7 +33,8 @@ jobs:
       run: cargo test --verbose
     - name: Upload
       run: |
-        ls
+        echo 进入构建目录
         cd target
+        echo 查看
         ls
   
