@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build #设置环境变量并构建
       run: |
-        $env:CUBISM_CORE=third-party
+        $env:CUBISM_CORE="third-party"
         ls env:
         cargo build --verbose
     - name: Run tests
