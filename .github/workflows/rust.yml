@@ -20,13 +20,13 @@ jobs:
       with:
         msystem: MINGW64
         update: true
-        install: mingw-w64-x86_64-clang
+        install: mingw-w64-x86_64-clang mingw-w64-x86_64-compiler-rt mingw-w64-x86_64-clang-tools-extra
     #- name: Set up Clang
     #  uses: egor-tensin/setup-clang@v1
     #  with:
     #    version: latest
     #    platform: x64
-        #cygwin: 1
+    #cygwin: 1
     - name: Build #设置环境变量并构建
       run: |
         $env:CUBISM_CORE="third-party"
