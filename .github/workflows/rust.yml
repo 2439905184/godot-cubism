@@ -41,5 +41,5 @@ jobs:
     - uses: actions/upload-artifact@v2 
       with:
         name: libgodot_cubism.so
-        path: target/debug/build
+        path: target/debug
   
