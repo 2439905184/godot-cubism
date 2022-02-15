@@ -35,7 +35,10 @@ jobs:
     - name: setQX
       run: |
         echo 检查权限
-        Get-ACL -Path "C:/msys64/mingw64/bin/"
+        $ACL = Get-ACL -Path "C:/msys64/mingw64/bin/"
+        $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("TestUser1","Read","Allow")
+        $ACL.SetAccessRule($AccessRule)
+        $ACL | Set-Acl -Path "C:/msys64/mingw64/bin/"
         $right="ReadAndExecute"
     #- name: Set up Clang
     #  uses: egor-tensin/setup-clang@v1
