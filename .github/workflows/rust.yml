@@ -35,8 +35,8 @@ jobs:
     #cygwin: 1
     - name: Setup-Cargo
       uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+      with:
+        toolchain: stable
       uses: actions-rs/cargo@v1
       with:
         command: build
